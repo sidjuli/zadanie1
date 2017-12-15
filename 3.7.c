@@ -4,7 +4,7 @@
 int main()
 {
     int i, j, n, m;
-    const int c=0, k=1;
+    int c=0;
     scanf("%d", &n);
     scanf("%d", &m);
     int* ost = (int*)malloc(n*sizeof(int));
