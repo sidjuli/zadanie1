@@ -1,23 +1,18 @@
 #include <stdio.h>
-int i, n, f, a, b;
+
+int F(int n)
+{
+if ( (n==2) || (n==1) )
+{
+return 1;
+}
+return F(n-1)+F(n-2);
+}
 
 int main()
 {
-    scanf("%d", &n);
-    if (n<3)
-    {
-        f=1;
-    }
-    else
-    {
-        a=1;
-        b=1;
-    }
-    for (i=3; i<=n; i++)
-    {
-        f=a+b;
-        a=b;
-        b=f;
-    }
-    printf("%d", f);
+int n;
+scanf("%d",&n);
+printf("%d",F(n));
+return 0;
 }
